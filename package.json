@@ -1,30 +1,34 @@
 {
-  "name": "static-starter",
+  "name": "rss-reader",
   "private": true,
   "version": "1.0.0",
-  "description": "A starter template for building static sites.",
+  "description": "An RSS feed generator.",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build:site": "eleventy --config eleventy.config.js",
-    "build": "npm run build:site -- --pathprefix=static-starter",
+    "build": "npm run build:site -- --pathprefix=rss-reader",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build:site -- --serve"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sccherry/static-starter.git"
+    "url": "git+https://github.com/sccherry/rss-reader.git"
   },
   "keywords": [
     "eleventy"
   ],
-  "author": "Steve Cherry <stevenccherry@gmail.com> (https://stevecherry.net)",
+  "author": {
+    "name": "Steve Cherry",
+    "email": "steven.c.cherry@gmail.com",
+    "url": "https://stevecherry.net"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sccherry/static-starter/issues"
+    "url": "https://github.com/sccherry/rss-reader/issues"
   },
-  "homepage": "https://github.com/sccherry/static-starter#readme",
+  "homepage": "https://github.com/sccherry/rss-reader#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",

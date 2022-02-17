@@ -1,2 +1,3 @@
-# static-starter
-A starter template for building static sites.
+# rss-reader
+
+An RSS feed generator.
