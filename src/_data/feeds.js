@@ -1,7 +1,24 @@
 const Cache = require('@11ty/eleventy-cache-assets');
 const { parse } = require('node-html-parser');
 
-const feeds = [];
+const feeds = [
+  {
+    name: 'Jazz Advice',
+    url: 'https://www.jazzadvice.com',
+    parser(document) {
+      return Array.from(document.querySelectorAll('.article-container')).map(
+        (article) => ({
+          title: article.querySelector('.entry-title').textContent,
+          body: article.querySelector('.excerpt').innerHTML,
+          url: article.querySelector('.item-link').getAttribute('href'),
+          date: new Date(
+            article.querySelector('.entry-date').textContent.trim().slice(0, -3)
+          ),
+        })
+      );
+    },
+  },
+];
 
 async function parseFeed({ url, parser }) {
   const html = await Cache(url, {
