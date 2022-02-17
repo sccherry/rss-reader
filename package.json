@@ -31,7 +31,6 @@
   "homepage": "https://github.com/sccherry/rss-reader#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
-    "@11ty/eleventy-navigation": "^0.3.2",
     "rimraf": "^3.0.2"
   }
 }
