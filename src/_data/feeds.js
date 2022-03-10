@@ -1,4 +1,4 @@
-const Cache = require('@11ty/eleventy-cache-assets');
+const EleventyFetch = require('@11ty/eleventy-fetch');
 const { parse } = require('node-html-parser');
 
 const feeds = [
@@ -21,7 +21,7 @@ const feeds = [
 ];
 
 async function parseFeed({ url, parser }) {
-  const html = await Cache(url, {
+  const html = await EleventyFetch(url, {
     duration: '1d',
     type: 'html',
   });
