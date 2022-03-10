@@ -8,7 +8,7 @@
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build:site": "eleventy --config eleventy.config.js",
-    "build": "npm run build:site -- --pathprefix=rss-reader",
+    "build": "npm run build:site -- --pathprefix rss-reader",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build:site -- --serve"
   },
@@ -21,7 +21,7 @@
   ],
   "author": {
     "name": "Steve Cherry",
-    "email": "steven.c.cherry@gmail.com",
+    "email": "stevenccherry@gmail.com",
     "url": "https://stevecherry.net"
   },
   "license": "MIT",
